@@ -8,12 +8,13 @@
   <form class="user"  method="POST">
 
     <div class="rounded-pill">
-      href="{% url 'nome_da_url' %}"
+
 
       {% csrf_token %}
       {{ form|bootstrap }}
 
     </div>
+      href="{% url 'http://127.0.0.1:8000/' %}"
     <button class="btn btn-primary btn-block" type="submit">Login</button>
   </form>
 

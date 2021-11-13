@@ -6,7 +6,10 @@ from .form import PessoaForm
 
 def index(request):
     return render(request, "index.html")
-
+@login_required
+def cadastro(request):
+    pessoa_form = PessoaForm()
+    return render(request, "cadastro.html", {"pessoa_form": pessoa_form})
 
 """def pessoa_novo(request):
      form = PessoaForm(request.POST or None)
