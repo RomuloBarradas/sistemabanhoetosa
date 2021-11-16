@@ -27,17 +27,22 @@ class BanhoeTosa (models.Model):
     def __str__(self):
         return self.BanhoeTosa
 
-class Animal (models.Model):
-    CATEGORY_CHOICES = (
+class Animal(models.Model):
+    ANIMAL_CHOICES = (
         ("Pastor Alemao", "Pastor Alemao"),
         ("Fila Brasileiro", "Fila Brasileiro"),
         ("Pincher", "Pincher"),
     )
-    SEXO_CHOICES = (
+    ANIMAL_SEXO_CHOICES = (
         ("MACHO", "MACHO"),
         ("FEMEA", "FEMEA"),
-
     )
+    category_Animal = models.CharField(max_length=100, choices=ANIMAL_CHOICES)
+    sexo_Animal = models.CharField(max_length=100, choices=ANIMAL_SEXO_CHOICES)
+
+# herança
+class Cadastro(Pessoa, Animal, BanhoeTosa):
+    ID_Cadastro = models.AutoField(primary_key=True, null=False)
 
 class Login (models.Model):
     ID_longin = models.AutoField(primary_key=True, null=False)

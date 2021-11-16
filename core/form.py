@@ -1,19 +1,8 @@
-from django.db import models
-from django.forms import ModelForm, fields
-from .models import Pessoa,Animal,BanhoeTosa
+from django.forms import ModelForm
+from .models import Cadastro
 
 
-class PessoaForm(ModelForm):
+class CadastroForm(ModelForm):
     class Meta:
-        model = Pessoa
-        fields = '__all__'
-
-class AnimalForm(ModelForm):
-    class Meta:
-        model = Animal
-        fields = '__all__'
-
-class BanhoeTosaForm(ModelForm):
-    class Meta:
-        model = BanhoeTosa
+        model = Cadastro
         fields = '__all__'
