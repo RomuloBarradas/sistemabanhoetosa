@@ -16,28 +16,29 @@ class Pessoa (models.Model):
         return self.nome
 
 class BanhoeTosa (models.Model):
-    CATEGORY_CHOICES = (
+    SERVIÇOS_CHOICES = (
         ("Banho", "Banho"),
         ("Banho e Tosa Higienica", "Banho e Tosa Higienica"),
         ("Bannho e Tosa", "Bannho e Tosa"),
     )
     ID_BanhoeTosa = models.AutoField(primary_key=True, null=False)
-    category = models.CharField(max_length=100, choices=CATEGORY_CHOICES)
+    serviços = models.CharField(max_length=100, choices=SERVIÇOS_CHOICES)
 
     def __str__(self):
         return self.BanhoeTosa
 
 class Animal(models.Model):
-    ANIMAL_CHOICES = (
+    RAÇA_ANIMAL_CHOICES = (
         ("Pastor Alemao", "Pastor Alemao"),
         ("Fila Brasileiro", "Fila Brasileiro"),
         ("Pincher", "Pincher"),
     )
-    ANIMAL_SEXO_CHOICES = (
+    ANIMAL_SEXO_CHOICES = [
         ("MACHO", "MACHO"),
         ("FEMEA", "FEMEA"),
-    )
-    category_Animal = models.CharField(max_length=100, choices=ANIMAL_CHOICES)
+    ]
+    nome_animal = models.CharField(max_length=30, null=False)
+    Raça_Animal = models.CharField(max_length=100, choices=RAÇA_ANIMAL_CHOICES)
     sexo_Animal = models.CharField(max_length=100, choices=ANIMAL_SEXO_CHOICES)
 
 # herança

@@ -125,19 +125,19 @@ header p {
 
 }
 
-#portifolio{
+#portfolio{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-top: : 20px;
 
 }
-#portifolio h2{
+#portfolio h2{
 	margin-bottom: 20px;
 
 }
 
-#portifolio img{
+#portfolio img{
 	width: 100%;
 
 }
@@ -201,17 +201,17 @@ header{
 	padding: 0 110px
 }
 
-#portifolio{
+#portfolio{
 	flex-direction: row;
 	flex-wrap: wrap;
 
 }
-#portifolio h2{
+#portfolio h2{
 	width: 100%;
 	text-align: center;
 
 }
-#portifolio img{
+#portfolio img{
 	width: 33.33333%;
 }
 #contato{
